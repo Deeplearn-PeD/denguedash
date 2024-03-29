@@ -1,22 +1,18 @@
 ---
-title: Welcome to Evidence
+title: Espalhamento da Dengue no Brasil no século 21
 ---
 
-_Build polished data products with SQL and Markdown_
 
-This demo [connects](/settings) to a local DuckDB file `needful_things.duckdb`.
 
-<LineChart
-  data={orders_by_month}
-  y=sales
-  yFmt=usd0k
-  title = "Sales by Month, USD"
-/>
+## A dengue no ínicio do século 21
 
-## Write in Markdown
+```sql casos_por_ano
+select year, sum(total) as total from dengue group by year order by year asc
+```
 
-Evidence renders markdown files into web pages. This page is:
-`[project]/pages/index.md`.
+No ano 2000, o Brasil registrou <Value data={casos_por_ano} column=total row=0/>  casos de dengue.
+
+
 
 ## Run SQL using Code Fences
 

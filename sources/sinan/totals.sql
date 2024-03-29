@@ -1,0 +1,1 @@
+select year, count(*) as total from dengue group by year order by year asc;
