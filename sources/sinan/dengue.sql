@@ -1,1 +1,1 @@
-select * from dengue;
+select *, (total/populacao)*100000 as incidencia from dengue;
